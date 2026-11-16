@@ -8,3 +8,7 @@ dist/
 *.pem
 *.key
 *.sqlite*
+
+# Generated Registry publication artifacts.
+node.zip
+REGISTRY_PACKAGE.json

@@ -5,6 +5,7 @@ description = "Export AI-generated images and video with invisible watermarks, C
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
 dependencies = ["filelock>=3.16,<4"]
+classifiers = ["Operating System :: POSIX :: Linux"]
 
 [project.urls]
 Repository = "https://github.com/ariadne-mark/ComfyUI-Ariadne-Mark"
@@ -16,5 +17,5 @@ PublisherId = "ariadne-mark"
 DisplayName = "Ariadne Mark — Watermark & C2PA Export"
 Icon = "https://ariadnemark.xyz/ariadne/assets/favicon.svg"
 
-# Proposed publisher identity; Registry publication requires an authenticated
-# account owning this ID. A GitHub release does not create a Registry listing.
+# Registered publisher: https://registry.comfy.org/publishers/ariadne-mark
+# Registry publication is performed explicitly by the publishing workflow.

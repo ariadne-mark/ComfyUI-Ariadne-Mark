@@ -1,0 +1,53 @@
+name: Publish Comfy Registry
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Exact version from pyproject.toml to publish
+        required: true
+        default: '0.1.0'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: comfy-registry-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the publishing source
+        uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a
+        with:
+          persist-credentials: false
+      - name: Install pinned official publishing tools
+        run: |
+          python3.12 -m venv "$RUNNER_TEMP/comfy-publish"
+          "$RUNNER_TEMP/comfy-publish/bin/python" -m pip install comfy-cli==1.26.0 ruff==0.17.5
+          echo "$RUNNER_TEMP/comfy-publish/bin" >> "$GITHUB_PATH"
+      - name: Validate version, qualified implementation and package
+        env:
+          PUBLISH_VERSION: ${{ inputs.version }}
+        run: |
+          python .github/scripts/prepare_registry.py
+          comfy --skip-prompt --no-enable-telemetry node validate
+          comfy --skip-prompt --no-enable-telemetry node pack
+          python .github/scripts/prepare_registry.py --archive
+      - name: Publish through the official CLI
+        env:
+          REGISTRY_ACCESS_TOKEN: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
+        run: python .github/scripts/publish_registry.py
+      - name: Retain the exact uploaded package and checksums
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: comfy-registry-${{ inputs.version }}
+          path: |
+            node.zip
+            REGISTRY_PACKAGE.json
+          if-no-files-found: error
+          retention-days: 30
