@@ -14,6 +14,8 @@ The adapter uses the existing **Ariadne Mark 0.7.3a4** SDK in an isolated proces
 
 ## Install
 
+Follow the [step-by-step ComfyUI watermarking and C2PA setup guide](https://ariadnemark.xyz/ariadne/guides/comfyui-watermarking/) for installation, SDK-kit configuration, image/video nodes and verification.
+
 Published as **`ariadne-mark-nodes` v0.1.0** in the [Comfy Registry](https://registry.comfy.org/nodes/ariadne-mark-nodes), by **@ariadne-mark**. The exact Registry package was installed and exercised on the qualification server.
 
 With the official Python Comfy CLI, the tested direct Registry installation is:
