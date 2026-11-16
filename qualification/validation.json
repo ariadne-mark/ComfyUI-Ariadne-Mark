@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "date": "2026-11-16T07:42:34.488552+00:00",
+  "comfy_version": "0.45.0",
+  "comfy_commit": "989d93d0d968e704c589ce0146bb18c77f6b50cc",
+  "sdk_image": "sha256:1a4dd358bcf698df654daaac631a26d3bc874104de5108bc94ce941c33a49980",
+  "queue_cases": [
+    {
+      "case": "image",
+      "prompt_id": "d47f25a5-f8ea-4740-bd51-430d8c44edba",
+      "expected_success": true,
+      "actual_success": true,
+      "outputs": 1,
+      "wall_s": 8.033
+    },
+    {
+      "case": "image-batch-two",
+      "prompt_id": "4284bc6b-f352-4c24-88fd-105aa86b1365",
+      "expected_success": true,
+      "actual_success": true,
+      "outputs": 2,
+      "wall_s": 6.528
+    },
+    {
+      "case": "native-video-economy_5s",
+      "prompt_id": "b378de11-9d85-4148-9d5e-35d90391c843",
+      "expected_success": true,
+      "actual_success": true,
+      "outputs": 1,
+      "wall_s": 5.025
+    },
+    {
+      "case": "native-video-economy_2s",
+      "prompt_id": "5fe09283-c119-400d-bb59-5c27c4ee1965",
+      "expected_success": true,
+      "actual_success": true,
+      "outputs": 1,
+      "wall_s": 5.026
+    },
+    {
+      "case": "native-video-resilient",
+      "prompt_id": "4c428050-cb40-4d65-851a-6a78780d3041",
+      "expected_success": true,
+      "actual_success": true,
+      "outputs": 1,
+      "wall_s": 21.612
+    },
+    {
+      "case": "saved-video",
+      "prompt_id": "dffd63c2-943b-4152-b283-1dce66b59b30",
+      "expected_success": true,
+      "actual_success": true,
+      "outputs": 1,
+      "wall_s": 4.522
+    },
+    {
+      "case": "outside-path-rejected",
+      "prompt_id": "157f17c9-8d6a-432d-aa24-b40f921e3088",
+      "expected_success": false,
+      "actual_success": false,
+      "outputs": 0,
+      "wall_s": 0.505
+    },
+    {
+      "case": "upstream-signed-created-rejected",
+      "prompt_id": "38a516af-1797-4e87-824d-14cbf5e81eb1",
+      "expected_success": false,
+      "actual_success": false,
+      "outputs": 0,
+      "wall_s": 1.007
+    },
+    {
+      "case": "missing-sdk-image-no-fallback",
+      "prompt_id": "35870789-6cb5-4ca6-8a0b-f3dd0f2f5781",
+      "expected_success": false,
+      "actual_success": false,
+      "outputs": 0,
+      "wall_s": 0.505
+    },
+    {
+      "case": "recovery-after-failed-sdk",
+      "prompt_id": "7797254e-3cf0-470c-ba6e-6ec45004ab96",
+      "expected_success": true,
+      "actual_success": true,
+      "outputs": 1,
+      "wall_s": 7.026
+    }
+  ],
+  "files_independently_verified": [
+    {
+      "case": "image",
+      "sha256": "49eb57dd1864b67f011a2c380a79569c27cbf3659f3e0bb463f6d16433c75450",
+      "token": "014d560617e17370",
+      "blind_id_recovered": true,
+      "c2pa_signature": "valid",
+      "issuer": "untrusted"
+    },
+    {
+      "case": "image-batch-two",
+      "sha256": "ed3979eede726e4708ed654d09859e11fc6434d2a122eb4184617484c772519a",
+      "token": "014d2084504fb035",
+      "blind_id_recovered": true,
+      "c2pa_signature": "valid",
+      "issuer": "untrusted"
+    },
+    {
+      "case": "image-batch-two",
+      "sha256": "48aad82cb32ee44607bb27fdf3498981d6b16fa7440fa251abc2308da1e001fd",
+      "token": "014d86e4cfa04552",
+      "blind_id_recovered": true,
+      "c2pa_signature": "valid",
+      "issuer": "untrusted"
+    },
+    {
+      "case": "native-video-economy_5s",
+      "sha256": "81cfc51c315a76be9fbded23be506071cea590d812680eb3d0775a287b8081d9",
+      "token": "014d39afa31aa12b",
+      "blind_id_recovered": true,
+      "c2pa_signature": "valid",
+      "issuer": "untrusted"
+    },
+    {
+      "case": "native-video-economy_2s",
+      "sha256": "97bd0f027f0d63f1c554ad56a048cee6c927eeea96cb93551ff454e832c3aadf",
+      "token": "014d34a2a848d44f",
+      "blind_id_recovered": true,
+      "c2pa_signature": "valid",
+      "issuer": "untrusted"
+    },
+    {
+      "case": "native-video-resilient",
+      "sha256": "a34eaae81898c53269049acc961380a07bed70ae7e35fec5705fffb5cfe6377d",
+      "token": "014d43a0444d0b6c",
+      "blind_id_recovered": true,
+      "c2pa_signature": "valid",
+      "issuer": "untrusted"
+    },
+    {
+      "case": "saved-video",
+      "sha256": "b24d99541467641118119840846b718269da82e02e832d455ae06a9c8c2b43bd",
+      "token": "014d4bc2d4784e7d",
+      "blind_id_recovered": true,
+      "c2pa_signature": "valid",
+      "issuer": "untrusted"
+    },
+    {
+      "case": "recovery-after-failed-sdk",
+      "sha256": "b04c2ed1c0def1bcdb7efe321df63c02dbdc9a2944db8043193e175dcff2350d",
+      "token": "014db729c1d2b3b3",
+      "blind_id_recovered": true,
+      "c2pa_signature": "valid",
+      "issuer": "untrusted"
+    }
+  ],
+  "node_import": "native V3 registration",
+  "inference_models_generated": "none; deterministic procedural fixtures",
+  "platform": "Linux x86-64 CPU, m6a.large",
+  "scope": "Functional integration, not a throughput benchmark or production signing qualification"
+}

@@ -1,0 +1,6 @@
+tests/
+scripts/
+qualification/
+.github/
+.gitignore
+examples/assets/

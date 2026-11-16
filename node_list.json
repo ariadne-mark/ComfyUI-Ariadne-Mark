@@ -1,0 +1,5 @@
+{
+  "AriadneExportImages": "Export final IMAGE batches with Ariadne watermarks, C2PA and receipts.",
+  "AriadneExportVideo": "Export native VIDEO with Economy5s, Economy2s or Resilient.",
+  "AriadneMarkSavedFile": "Mark a final PNG, JPEG or MP4 in the ComfyUI input/output directory."
+}

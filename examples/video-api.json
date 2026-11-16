@@ -1,0 +1,6 @@
+{
+  "1": {"class_type": "LoadImage", "inputs": {"image": "ariadne-unmarked.png"}},
+  "2": {"class_type": "RepeatImageBatch", "inputs": {"image": ["1", 0], "amount": 72}},
+  "3": {"class_type": "CreateVideo", "inputs": {"images": ["2", 0], "fps": 12, "bit_depth": 8, "color_space": "sRGB", "codec": "none"}},
+  "4": {"class_type": "AriadneExportVideo", "inputs": {"video": ["3", 0], "filename_prefix": "ariadne", "created_at_utc": "", "video_profile": "economy_5s", "audio_kind": "none"}}
+}

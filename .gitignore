@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.local.json
+qualification/raw/
+dist/
+.env
+*.pem
+*.key
+*.sqlite*

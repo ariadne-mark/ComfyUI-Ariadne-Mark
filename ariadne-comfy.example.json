@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "kit_directory": "/absolute/private/path/to/ariadne-kit",
+  "runner": {
+    "kind": "docker",
+    "command": ["docker"],
+    "image": "sha256:REPLACE_WITH_YOUR_VERIFIED_LOCAL_SDK_IMAGE_ID",
+    "network": "none"
+  },
+  "timeout_seconds": 900
+}

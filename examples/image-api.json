@@ -1,0 +1,4 @@
+{
+  "1": {"class_type": "LoadImage", "inputs": {"image": "ariadne-unmarked.png"}},
+  "2": {"class_type": "AriadneExportImages", "inputs": {"images": ["1", 0], "filename_prefix": "ariadne", "created_at_utc": ""}}
+}

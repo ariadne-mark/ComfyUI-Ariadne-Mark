@@ -1,0 +1,20 @@
+[project]
+name = "ariadne-mark-nodes"
+version = "0.1.0"
+description = "Export AI-generated images and video with invisible watermarks, C2PA and receipts using your own Ariadne Mark SDK kit."
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = ["filelock>=3.16,<4"]
+
+[project.urls]
+Repository = "https://github.com/ariadne-mark/ComfyUI-Ariadne-Mark"
+Documentation = "https://github.com/ariadne-mark/ComfyUI-Ariadne-Mark#readme"
+"SDK documentation" = "https://ariadnemark.xyz/ariadne/docs/quickstart/"
+
+[tool.comfy]
+PublisherId = "ariadne-mark"
+DisplayName = "Ariadne Mark — Watermark & C2PA Export"
+Icon = "https://ariadnemark.xyz/ariadne/assets/favicon.svg"
+
+# Proposed publisher identity; Registry publication requires an authenticated
+# account owning this ID. A GitHub release does not create a Registry listing.
