@@ -17,3 +17,17 @@ release are recorded in `qualification/`.
 
 Never add runtime package/model downloads, silent unmarked fallback, telemetry,
 or signing credentials to node widgets/workflows.
+
+## Registry publishing
+
+Use the manual **Publish Comfy Registry** workflow on `main`, with the exact
+version from `pyproject.toml`. The workflow checks publisher/package identity and
+qualified implementation hashes before accessing the publishing secret. All media
+qualification stays on the project server. An implementation change requires new
+qualification and updated source hashes before publishing a new immutable version.
+
+The key is supplied to the official CLI through its hidden stdin prompt. Workflow
+output is additionally redacted, and exit codes are preserved. Never pass a key
+via `--token`, print it, or add it to a workflow example. The uploaded `node.zip`
+and `REGISTRY_PACKAGE.json` are retained as run artifacts for 30 days; archive
+release evidence in the project records before expiry.

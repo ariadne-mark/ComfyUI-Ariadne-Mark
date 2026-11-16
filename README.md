@@ -14,7 +14,17 @@ The adapter uses the existing **Ariadne Mark 0.7.3a4** SDK in an isolated proces
 
 ## Install
 
-Clone this repository into `ComfyUI/custom_nodes/ComfyUI-Ariadne-Mark`. Install `requirements.txt` using your Comfy environment, then restart ComfyUI. This supplies the nodes; provision the SDK kit below separately.
+Published as **`ariadne-mark-nodes` v0.1.0** in the [Comfy Registry](https://registry.comfy.org/nodes/ariadne-mark-nodes), by **@ariadne-mark**. The exact Registry package was installed and exercised on the qualification server.
+
+With the official Python Comfy CLI, the tested direct Registry installation is:
+
+```sh
+comfy --workspace /absolute/path/to/ComfyUI --skip-prompt --no-enable-telemetry node registry-install ariadne-mark-nodes --version 0.1.0
+```
+
+This installs the nodes. Configure your separate Ariadne SDK kit below, then restart ComfyUI. In ComfyUI-Manager, use the Registry package ID `ariadne-mark-nodes`; catalogue refresh and your Manager version affect when new entries appear.
+
+For a manual GitHub installation, clone this repository into `ComfyUI/custom_nodes/ComfyUI-Ariadne-Mark`. Install `requirements.txt` using your Comfy environment, then restart ComfyUI. This supplies the nodes; provision the SDK kit below separately.
 
 Qualified on **ComfyUI 0.45.0 on Linux x86-64 CPU** with the exact SDK image documented in [the server qualification](qualification/README.md). The Docker runner always requests `linux/amd64`; Windows/macOS host operation is not qualified by this release. The native Comfy V3 extension API is required.
 
@@ -71,7 +81,11 @@ Download the exact PNG/MP4 from the node, then use the [Ariadne verifier](https:
 
 `examples/` contains API workflows and a UI workflow for an image export. Replace the sample loader with your generator. No large generation model is required for the included verification smoke workflows.
 
-Registry/Manager publication is a separate step requiring a publisher account and a Registry API key. The proposed publisher ID is `ariadne-mark`; the repository/release alone does not mean the node is listed. See [publishing instructions](https://docs.comfy.org/registry/publishing). Credentials belong in the Registry/CI secret interface, never command-line arguments or example workflows.
+[Registry package](https://registry.comfy.org/nodes/ariadne-mark-nodes) · [Publisher](https://registry.comfy.org/publishers/ariadne-mark) · [Publishing run](https://github.com/ariadne-mark/ComfyUI-Ariadne-Mark/actions/runs/43841364387).
+
+Version 0.1.0 uses the same qualified node implementation recorded in `qualification/source-hashes.json`. The Registry source commit is `6a118f960cef359ab2e8e23845e45d51c4f67dc6`; subsequent GitHub documentation changes do not replace that immutable package. Registry availability is not a Comfy Cloud compatibility qualification.
+
+Maintainers publish deliberately using the manual **Publish Comfy Registry** GitHub workflow. The scoped publisher key is stored as the repository secret `REGISTRY_ACCESS_TOKEN`; it is never put into node widgets, workflows, command-line arguments or source files.
 
 Report reproducible integration issues via GitHub, including node/SDK/Comfy versions and sanitized logs. See the SDK for format limits and legal implementation guidance. Tools support compliance work; the plugin is not legal certification.
 
